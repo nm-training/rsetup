@@ -15,5 +15,7 @@ Imports:
     usethis, 
     rmarkdown, 
     utils, 
-    rstudioapi
+    rstudioapi, 
+    fs, 
+    tools
     
