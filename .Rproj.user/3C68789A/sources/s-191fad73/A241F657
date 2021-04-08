@@ -1,6 +1,6 @@
 {
     "id": "A241F657",
-    "path": "~/R/packages/rtraining/R/setup.R",
+    "path": "~/R/packages/rsetup/R/setup.R",
     "project_path": "R/setup.R",
     "type": "r_source",
     "hash": "0",
@@ -12,7 +12,7 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "8,0",
+        "cursorPosition": "10,49",
         "scrollLine": "2"
     },
     "folds": "",

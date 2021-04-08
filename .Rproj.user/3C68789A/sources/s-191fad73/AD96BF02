@@ -1,6 +1,6 @@
 {
     "id": "AD96BF02",
-    "path": "~/R/packages/rtraining/DESCRIPTION",
+    "path": "~/R/packages/rsetup/DESCRIPTION",
     "project_path": "DESCRIPTION",
     "type": "dcf",
     "hash": "0",
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "3,14",
+        "cursorPosition": "0,15",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1617876304,
+    "lastKnownWriteTime": 1617880582,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1617876304574,
+    "last_content_update": 1617880582173,
     "read_only": false,
     "read_only_alternatives": []
 }
