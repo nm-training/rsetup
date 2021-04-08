@@ -30,6 +30,10 @@ get_dir <- function() {
 
 
 
+devtools::build(binary = TRUE)
+
+
+
 
 
 
