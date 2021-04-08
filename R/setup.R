@@ -4,13 +4,13 @@
 
 # create_from_github()
 
-setup_rbasic <- function(){
+setup_rbasic <- function(path){
 
 options(Ncpus = 4)
 
 # if (require(rsetup)) { remove.packages("rsetup") }
 
-usethis::use_course(url,
+usethis::use_course(url = path,
            destdir = get_dir())
 
 }
