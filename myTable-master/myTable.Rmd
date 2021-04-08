@@ -1,0 +1,70 @@
+---
+title: "R Packages"
+author: "Binod Jung Bogati"
+date: "2/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install the packages
+
+```{r}
+# install.packages("devtools")
+# install.packages("roxygen2")
+```
+
+## Create a framework for your package
+
+```{r}
+devtools::create("myTable")
+```
+
+## Adding R functions
+
+Now, we create a function in R/gen_table.R
+
+```{r}
+#' @export
+
+gen_table <- function(x){
+  cat("Multiplication Table of", x, "\n")
+  for(i in 1:10){
+    y <- x * i
+    cat(x, "*", i, "=", y, "\n")
+  }
+}
+
+
+gen_table(100)
+```
+
+```{r}
+setwd("./myTable")
+
+getwd()
+
+devtools::document()
+```
+
+# Making Binary Data Available
+
+```{r}
+x <- c(1:10)
+devtools::use_data(x)
+```
+
+# Making Raw Data Available
+
+```{r}
+system.file("extdata", "model-coef.tsv", package = "myTable")
+```
+
+# Making Vignettes
+
+```{r}
+devtools::use_vignette("introduction")
+```
+

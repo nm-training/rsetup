@@ -10,9 +10,8 @@ options(Ncpus = 4)
 
 # if (require(rsetup)) { remove.packages("rsetup") }
 
-usethis::use_zip(url = path,
-           destdir = get_dir(),
-           cleanup = F
+usethis::use_course(url = path,
+           destdir = get_dir()
            )
 
 }
