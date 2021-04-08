@@ -1,11 +1,14 @@
 
+
+# install_url
+
 # create_from_github()
 
 setup_rbasic <- function(){
 
 options(Ncpus = 4)
 
-if (!require(rtraining)) { remove.packages("rtraining") }
+if ((rtraining)) { remove.packages("rtraining") }
 
 usethis::use_course("https://github.com/rugnepal/weather_station_data/archive/refs/heads/master.zip",
            destdir = get_dir ())
