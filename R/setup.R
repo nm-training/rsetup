@@ -8,7 +8,7 @@ setup_rbasic <- function(){
 
 options(Ncpus = 4)
 
-if ((rsetup)) { remove.packages("rsetup") }
+if (require(rsetup)) { remove.packages("rsetup") }
 
 usethis::use_course("https://github.com/rugnepal/weather_station_data/archive/refs/heads/master.zip",
            destdir = get_dir ())
