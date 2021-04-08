@@ -3,7 +3,7 @@
     "path": "~/R/packages/rtraining/R/setup.R",
     "project_path": "R/setup.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "1646089477",
     "contents": "",
     "dirty": false,
     "created": 1617867793786.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,0",
-        "scrollLine": "0"
+        "cursorPosition": "9,0",
+        "scrollLine": "4"
     },
     "folds": "",
-    "lastKnownWriteTime": 1617874070,
+    "lastKnownWriteTime": 1617875953,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1617874070111,
+    "last_content_update": 1617875953580,
     "read_only": false,
     "read_only_alternatives": []
 }
