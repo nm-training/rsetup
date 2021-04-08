@@ -1,6 +1,6 @@
 Package: rsetup
 Type: Package
-Title: R Training course
+Title: R setup package for training course
 Version: 0.1.1
 Authors@R: c(
     person("Binod Jung", "Bogati", email = "binod.bogati@numericmind.com", role = "cre"),
