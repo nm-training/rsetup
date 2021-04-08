@@ -8,37 +8,30 @@ setup_rbasic <- function(){
 
 options(Ncpus = 4)
 
-if (require(rsetup)) { remove.packages("rsetup") }
+# if (require(rsetup)) { remove.packages("rsetup") }
 
-usethis::use_course("https://github.com/rugnepal/weather_station_data/archive/refs/heads/master.zip",
-           destdir = get_dir ())
+usethis::use_course(url,
+           destdir = get_dir())
 
 }
-
 
 get_dir <- function() {
-  if (interactive() && .Platform$OS.type == "windows") {
-  utils::choose.dir(getwd(), "Choose a suitable folder")
+
+  rstudioapi::selectDirectory(
+    caption = "Select Directory",
+    label = "Select",
+    path = ""
+  )
+
+
+#   if (.Platform$OS.type == "windows") {
+#    utils::choose.dir("", caption = "Choose a suitable folder to load R Training file")
+# }
+#
+#   else {
+#     dirname(file.choose())
+#   }
 
 }
-
-  else {
-    dirname(file.choose())
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
