@@ -3,7 +3,7 @@
     "path": "~/R/packages/rtraining/R/setup.R",
     "project_path": "R/setup.R",
     "type": "r_source",
-    "hash": "1646089477",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1617867793786.0,
@@ -12,7 +12,7 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "9,0",
+        "cursorPosition": "17,8",
         "scrollLine": "4"
     },
     "folds": "",
