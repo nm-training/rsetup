@@ -4,17 +4,33 @@
 
 # create_from_github()
 
-setup_rbasic <- function(path){
+get_course <- function(url_path, set_path) {
 
-options(Ncpus = 4)
+  options(Ncpus = 4)
 
-# if (require(rsetup)) { remove.packages("rsetup") }
+  #if (require(rsetup)) { remove.packages("rsetup") }
 
-usethis::use_course(url = path,
-           destdir = get_dir()
-           )
+  usethis::use_course(url = url_path,
+                      destdir = set_path
+  )
+
 
 }
+
+
+set_project <- function(url_path, set_path=set_path){
+
+  # usethis::create_project(dir)
+
+  get_course(url_path, set_path )
+
+  usethis::proj_activate(set_path)
+
+}
+
+
+
+
 
 get_dir <- function() {
 
@@ -25,14 +41,12 @@ get_dir <- function() {
   )
 
 
-#   if (.Platform$OS.type == "windows") {
-#    utils::choose.dir("", caption = "Choose a suitable folder to load R Training file")
-# }
-#
-#   else {
-#     dirname(file.choose())
-#   }
+  #   if (.Platform$OS.type == "windows") {
+  #    utils::choose.dir("", caption = "Choose a suitable folder to load R Training file")
+  # }
+  #
+  #   else {
+  #     dirname(file.choose())
+  #   }
 
 }
-
-
