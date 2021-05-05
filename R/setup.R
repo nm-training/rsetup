@@ -22,7 +22,7 @@ set_project <- function(url_path, set_path=set_path){
 
   # usethis::create_project(dir)
 
-  get_course(url_path, set_path )
+  rsetup::get_course(url_path, set_path )
 
   usethis::proj_activate(set_path)
 
