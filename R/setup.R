@@ -25,19 +25,19 @@ set_project <- function(url_path, set_path=set_path){
 # get project path from user
 set_path <- function() {
 
-  rstudioapi::selectDirectory(
-    caption = "Select Directory",
-    label = "Select",
-    path = ""
-  )
+    if (.Platform$OS.type == "windows") {
+     # utils::choose.dir("", caption = "Choose a suitable folder to load R Training file")
 
+      dirname(file.choose())
+  }
 
-  #   if (.Platform$OS.type == "windows") {
-  #    utils::choose.dir("", caption = "Choose a suitable folder to load R Training file")
-  # }
-  #
-  #   else {
-  #     dirname(file.choose())
-  #   }
+    else {
+
+      rstudioapi::selectDirectory(
+        caption = "Select Directory",
+        label = "Select",
+        path = ""
+      )
+    }
 
 }
