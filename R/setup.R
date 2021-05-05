@@ -1,43 +1,40 @@
 
 # download course file and unzip it
 get_course <- function(url_path, set_path) {
-
   options(Ncpus = 4)
 
-  #if (require(rsetup)) { remove.packages("rsetup") }
+  # if (require(rsetup)) { remove.packages("rsetup") }
 
-  usethis::use_course(url = url_path,
-                      destdir = set_path
+  usethis::use_course(
+    url = url_path,
+    destdir = set_path
   )
 }
 
 # get course from url and activate the project
-set_project <- function(url_path, set_path=set_path){
+set_project <- function(url_path, set_path = set_path) {
 
   # usethis::create_project(dir)
 
-  rsetup::get_course(url_path, set_path )
+  rsetup::get_course(url_path, set_path)
 
   usethis::proj_activate(set_path)
-
 }
 
 # get project path from user
 set_path <- function() {
+  if (.Platform$OS.type == "windows") {
+    utils::choose.dir("", caption = "Choose a Suitable Folder")
 
-    if (.Platform$OS.type == "windows") {
-     # utils::choose.dir("", caption = "Choose a suitable folder to load R Training file")
 
-      dirname(file.choose())
+    # choose.files()
   }
 
-    else {
-
-      rstudioapi::selectDirectory(
-        caption = "Select Directory",
-        label = "Select",
-        path = ""
-      )
-    }
-
+  else {
+    rstudioapi::selectDirectory(
+      caption = "Select Directory",
+      label = "Select",
+      path = ""
+    )
+  }
 }
