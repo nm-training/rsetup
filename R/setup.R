@@ -1,9 +1,5 @@
 
-
-# install_url
-
-# create_from_github()
-
+# download course file and unzip it
 get_course <- function(url_path, set_path) {
 
   options(Ncpus = 4)
@@ -13,11 +9,9 @@ get_course <- function(url_path, set_path) {
   usethis::use_course(url = url_path,
                       destdir = set_path
   )
-
-
 }
 
-
+# get course from url and activate the project
 set_project <- function(url_path, set_path=set_path){
 
   # usethis::create_project(dir)
@@ -28,11 +22,8 @@ set_project <- function(url_path, set_path=set_path){
 
 }
 
-
-
-
-
-get_dir <- function() {
+# get project path from user
+set_path <- function() {
 
   rstudioapi::selectDirectory(
     caption = "Select Directory",
