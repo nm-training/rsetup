@@ -25,8 +25,6 @@ set_project <- function(url_path, set_path = set_path) {
 set_path <- function() {
   if (.Platform$OS.type == "windows") {
     utils::choose.dir("", caption = "Choose a Suitable Folder")
-
-
     # choose.files()
   }
 
