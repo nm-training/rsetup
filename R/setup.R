@@ -12,7 +12,7 @@ get_course <- function(url_path, set_path) {
 }
 
 # get course from url and activate the project
-set_project <- function(url_path, set_path = set_path) {
+set_project <- function(url_path, set_path) {
 
   # usethis::create_project(dir)
 

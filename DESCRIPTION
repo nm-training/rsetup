@@ -18,4 +18,5 @@ Imports:
     rstudioapi, 
     fs, 
     tools, 
-    googlesheets4
+    googlesheets4, 
+    writexl
