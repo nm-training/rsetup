@@ -45,6 +45,12 @@ install_pdf <- \() {
 }
 
 
+install_pkg <- \(){
+
+jobRunScript(rsetup::set_path(), encoding = "utf-8", workingDir = rsetup::set_path(),
+             importEnv = FALSE, exportEnv = "")
+
+}
 
 
 
