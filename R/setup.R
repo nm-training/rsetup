@@ -36,3 +36,15 @@ set_path <- function() {
     )
   }
 }
+
+
+install_pdf <- \() {
+
+  tinytex::install_tinytex(version = "latest")
+
+}
+
+
+
+
+

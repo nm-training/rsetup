@@ -19,4 +19,7 @@ Imports:
     fs, 
     tools, 
     googlesheets4, 
-    writexl
+    writexl, 
+    tinytex, 
+    ragg, 
+    readxl
