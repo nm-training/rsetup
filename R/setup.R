@@ -37,22 +37,18 @@ set_path <- function() {
   }
 }
 
-
+# install tinytex dependency for tinytex pdf
 install_pdf <- \() {
-
   tinytex::install_tinytex(version = "latest")
-
 }
 
 
+# add local jobs using function
 run_jobs <- \(){
+  path <- rstudioapi::selectFile()
 
-path <- rstudioapi::selectFile()
-
-rstudioapi::jobRunScript(path, encoding = "utf-8", workingDir = path,
-             importEnv = FALSE, exportEnv = "")
-
+  rstudioapi::jobRunScript(path,
+    encoding = "utf-8", workingDir = path,
+    importEnv = FALSE, exportEnv = ""
+  )
 }
-
-
-
