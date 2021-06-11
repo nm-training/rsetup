@@ -45,9 +45,11 @@ install_pdf <- \() {
 }
 
 
-install_pkg <- \(){
+run_jobs <- \(){
 
-jobRunScript(rsetup::set_path(), encoding = "utf-8", workingDir = rsetup::set_path(),
+path <- rsetup::set_path()
+
+rstudioapi::jobRunScript(path, encoding = "utf-8", workingDir = path,
              importEnv = FALSE, exportEnv = "")
 
 }
