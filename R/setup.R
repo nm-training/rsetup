@@ -45,7 +45,7 @@ install_pdf <- function() {
 
 # add local jobs using function
 run_jobs <- function(){
-  path <- choose.files()
+  path <- file.choose()
 
   # path <- "C:\Users\m1s1n\Documents\R\r-course-2021\00_participants\00_getting_started\install_packages.R"
   rstudioapi::jobRunScript(path, importEnv = TRUE)
