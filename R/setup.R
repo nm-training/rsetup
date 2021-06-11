@@ -47,7 +47,7 @@ install_pdf <- \() {
 
 run_jobs <- \(){
 
-path <- choose.files()
+path <- rstudioapi::selectFile()
 
 rstudioapi::jobRunScript(path, encoding = "utf-8", workingDir = path,
              importEnv = FALSE, exportEnv = "")
