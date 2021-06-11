@@ -47,8 +47,6 @@ install_pdf <- function() {
 run_jobs <- function(){
   path <- choose.files()
 
-  rstudioapi::jobRunScript(path,
-    encoding = "utf-8", workingDir = path,
-    importEnv = FALSE, exportEnv = ""
-  )
+  # path <- "C:\Users\m1s1n\Documents\R\r-course-2021\00_participants\00_getting_started\install_packages.R"
+  rstudioapi::jobRunScript(path, importEnv = TRUE)
 }
