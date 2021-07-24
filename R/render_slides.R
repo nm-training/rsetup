@@ -26,8 +26,9 @@ render_slides <- function(name = ".Rmd", docs = "docs",
 
   purrr::map(here::here(files), rmarkdown::render)
 
+  copy_folder(docs, slides, incl_dirs)
+
   copy_file(docs, slides, ext)
 
-  copy_folder(docs, slides, incl_dirs)
 }
 
