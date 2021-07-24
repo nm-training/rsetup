@@ -20,15 +20,15 @@ copy_file <- function(source, dest, pattern) {
 
 
 render_slides <- function(name = ".Rmd", docs = "docs",
-                          slides = "slides",
-                          includes = "libs|imgs|image|figures|.css|.html") {
+                          slides = "slides", ext = ".css|.html",
+                          includes = "libs|figures") {
   files <- list.files(path = docs, pattern = name, full.names = T)
 
   purrr::map(here::here(files), rmarkdown::render)
 
   copy_folder(docs, slides, includes)
 
-  # copy_file(docs, slides, ext)
+  copy_file(docs, slides, ext)
 
 }
 
