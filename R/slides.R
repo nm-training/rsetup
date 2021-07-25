@@ -55,8 +55,6 @@ open_doc <- function(name, docs = "docs") {
 
 open_slide <- function(name, slides = "slides") {
 
-  browseURL(here::here(slides, paste0(slides, name, ".html")))
+  browseURL(here::here(slides, paste0(name, ".html")))
 
 }
-
-
