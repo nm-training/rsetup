@@ -17,10 +17,13 @@ copy_folder <- function(source, dest, incl_dirs) {
 ## copy files
 
 copy_file <- function(source, dest, pattern) {
-  files <- list.files(path = source, pattern = pattern, full.names = T)
+  old  <- here::here(list.files(path = source, pattern = pattern, full.names = T))
+  new <- gsub(source, dest, old)
 
-  file.rename(files, dest)
+  purrr::map2(.x = here::here(old), .y = here::here(new), file.rename)
 }
+
+
 
 
 # render slide to html
@@ -42,9 +45,9 @@ render_slide <- function(name = ".Rmd", docs = "docs",
 }
 
 # open documents
-open_doc <- function(name, slides = "slides") {
+open_doc <- function(name, docs = "docs") {
 
-  rstudioapi::navigateToFile(here::here(slides, paste0(file, ".html")))
+  rstudioapi::navigateToFile(here::here(docs, paste0(name, ".Rmd")))
 
 }
 
@@ -52,7 +55,7 @@ open_doc <- function(name, slides = "slides") {
 
 open_slide <- function(name, slides = "slides") {
 
-  browseURL(here::here(slides, paste0(slides, file, ".html")))
+  browseURL(here::here(slides, paste0(slides, name, ".html")))
 
 }
 
